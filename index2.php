@@ -14,6 +14,6 @@ UsuarioControlador::Alta();
 
 }
 
-require "Vistas/FormAltaUsuario.Vista.php";
+require "Vistas/FormLogin.Vista.php";
 
 

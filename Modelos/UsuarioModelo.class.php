@@ -59,6 +59,14 @@ private function passwordHash($password) {
 }
 
 
+public function VerificarCredenciales(){
+    
+
+
+    
+}
+
+
 
 
 

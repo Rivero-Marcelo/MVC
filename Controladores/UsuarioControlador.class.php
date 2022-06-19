@@ -15,4 +15,13 @@ public static function Alta(){
 
 
 
+public static function Login(){
+
+    $u = new UsuarioModelo();
+    $u -> username = $_POST['username'];
+    $u -> password = $_POST['password'];
+    $u -> VerificarCredenciales();
+
+}
+
 }

@@ -1,7 +1,4 @@
-<?php  $seccion1="FormAltaProducto"; ?>
-<?php  $seccion2="ListadoProductos"; ?>
-
-<!doctype html>
+ <!doctype html>
 <html lang="en">
   <head>
     <title>Title</title>
@@ -14,18 +11,40 @@
 
   </head>
   <body>
-   
-<?php require "../Vistas/Menu.Vista.php"; ?>
+
+<main>
 
 
-<div class="container my-3">
+  <div class="container">
+    <div class="row vh-100 justify-content-center align-items-center">
+      <div class="col-auto">
 
-<?php if(isset($seccion1))require "../Vistas/$seccion1.Vista.php"; ?>
 
-<?php if(isset($seccion2))require "../Vistas/$seccion2.Vista.php"; ?>
+  <form action="index2.php" method="post">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Usuario</label>
+            <input type="text" class="form-control" name="username" placeholder="Nombre de Usuario" autofocus />
+        </div>
+        <div class="mb-3">
+            <label for="descripcion" class="form-label">Contrseña</label>
+            <input type="password" class="form-control" name="password" placeholder="Contraseña"></textarea>
+        </div>
+  
+        <div class="d-grid gap-2">
+            <button class="btn btn-success">Iniciar Sesión</button>
+            
+        </div>
+    </form>
 
-</div>
+      </div>
+    
+    
+    </div>
+  </div>
 
+</main>
+
+  
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
