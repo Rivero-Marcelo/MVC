@@ -49,8 +49,17 @@ private function Insertar(){
 
 private function Actualizar()
 {
+    $sql = "UPDATE mvc_usuarios SET
+    username = '" . $this -> username . "',
+    password = '" . $this -> password . "'
+    WHERE id = " . $this -> id;
+    $this -> conexion -> query($sql);
 
+}
 
+public function Eliminar(){
+    $sql = "DELETE FROM mvc_usuario WHERE id = " . $this -> id;
+    $this -> conexion -> query($sql);
 }
 
 
@@ -61,13 +70,22 @@ private function passwordHash($password) {
 
 public function VerificarCredenciales(){
     
+    $sql = "SELECT * FROM mvc_usuarios WHERE username = '" . $this -> username . "'";  
+    $usuario = $this -> conexion -> query($sql);
+    if($usuario -> num_rows == 0){return false;}
 
+    $credenciales = $usuario -> fetch_assoc();
 
-    
+    return $this -> ComprobarHash($credenciales['password']);
+
 }
 
 
+private function ComprobarHash($passwordHash){
 
+return password_verify($this->password, $passwordHash);
+
+}
 
 
 

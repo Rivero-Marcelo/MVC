@@ -1,3 +1,7 @@
+
+<?php if(session_status() == PHP_SESSION_NONE ){
+  echo "NO HAY SESION"; die();}?>
+
 <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">MVC</a>

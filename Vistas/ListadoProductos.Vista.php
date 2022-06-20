@@ -1,3 +1,6 @@
+<?php if(session_status() == PHP_SESSION_NONE ){
+  echo "NO HAY SESION"; die();}?>
+
 <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 py-4 bg-white">
         <h2>Listado de Productos</h2>
         <table class="table table-dark table-striped">

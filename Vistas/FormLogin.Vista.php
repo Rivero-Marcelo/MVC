@@ -11,6 +11,8 @@
 
   </head>
   <body>
+  
+  
 
 <main>
 
@@ -34,15 +36,18 @@
             <button class="btn btn-success">Iniciar Sesión</button>
             
         </div>
-    </form>
 
-      </div>
+        <?php if(isset($_GET['aut'])&& ($_GET['aut']==0)) {echo "ERROR DE AUTENTICACION";} ?>
+
+    </form>
     
     
     </div>
   </div>
+  </div>
 
 </main>
+
 
   
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>

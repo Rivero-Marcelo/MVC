@@ -1,7 +1,10 @@
+<?php if(session_status() == PHP_SESSION_NONE ){
+  echo "NO HAY SESION"; die();}?>
+
 <div class="row">
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 py-4 bg-white">
             <h2>Nuevo Producto</h2>
-            <form>
+            <form action="" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre</label>
                     <input type="text" class="form-control" id="nombre" placeholder="Nombre del Producto" autofocus />

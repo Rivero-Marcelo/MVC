@@ -1,5 +1,8 @@
-<?php  $seccion1="FormAltaProducto"; ?>
-<?php  $seccion2="ListadoProductos"; ?>
+<?php if(session_status() == PHP_SESSION_NONE ){
+  echo "NO HAY SESION"; die();}?>
+
+<?php  $seccion1=null; ?>
+<?php  $seccion2=null; ?>
 
 <!doctype html>
 <html lang="en">
@@ -15,14 +18,18 @@
   </head>
   <body>
    
-<?php require "../Vistas/Menu.Vista.php"; ?>
+<?php require "Vistas/Menu.Vista.php"; ?>
 
 
 <div class="container my-3">
 
-<?php if(isset($seccion1))require "../Vistas/$seccion1.Vista.php"; ?>
+<?php if(isset($seccion1))require "Vistas/$seccion1.Vista.php"; ?>
 
-<?php if(isset($seccion2))require "../Vistas/$seccion2.Vista.php"; ?>
+<?php if(isset($seccion2))require "Vistas/$seccion2.Vista.php"; ?>
+
+
+<?php var_dump($_SESSION); ?>
+
 
 </div>
 
