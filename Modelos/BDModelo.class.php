@@ -1,7 +1,9 @@
 <?php
 
-include "util/config.php";
-require "util/autoload.php";
+//include "util/config.php";
+//require "util/autoload.php";
+
+
 
 class BDModelo {
 

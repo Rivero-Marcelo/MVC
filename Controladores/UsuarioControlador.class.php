@@ -1,6 +1,6 @@
-<?php
+<?php 
 
-require "util/autoload.php";
+
 
 class UsuarioControlador {
 
@@ -23,7 +23,7 @@ public static function Login(){
     
     if($acceso = $u -> VerificarCredenciales()){
     
-        self::SeteoDeSesion($u);
+        SeteoDeSesion($u);
         require "Vistas/Principal.Vista.php";   
     
     }else 
@@ -32,14 +32,6 @@ public static function Login(){
 }
 
 
-
-private static function SeteoDeSesion($u){
-
-    session_start();
-    $_SESSION["usuario"] = $u->username;
-    $_SESSION["autenticado"] = TRUE;
-
-}
 
 }
 

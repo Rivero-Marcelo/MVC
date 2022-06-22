@@ -1,7 +1,7 @@
 <?php
 
-require "util/autoload.php";
 
+//require "util/autoload.php";
 
 class UsuarioModelo extends BDModelo{
 
@@ -79,7 +79,6 @@ public function VerificarCredenciales(){
     return $this -> ComprobarHash($credenciales['password']);
 
 }
-
 
 private function ComprobarHash($passwordHash){
 
